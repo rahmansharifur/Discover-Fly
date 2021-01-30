@@ -117,52 +117,34 @@
         function handleTicketBooking(ticket, isIncrease) {
             const ticketInput = document.getElementById(ticket + '-count');
             const ticketCount = parseInt(ticketInput.value);
-
-
             let ticketNewCount = ticketCount;
             if (isIncrease == true) {
                 ticketNewCount = ticketCount + 1;
-
             }
             if (isIncrease == false && ticketCount > 0) {
                 ticketNewCount = ticketCount - 1;
             }
             ticketInput.value = ticketNewCount;
 
-
-
-
             culculatorTotal()
-
         }
 
         function culculatorTotal() {
-            const firstClass = getInputValue('firstClass')
-
-            const economyClass = getInputValue('economyClass')
-
-            const totalPrice = firstClass * 150 + economyClass * 100
-
+            const firstClass = getInputValue('firstClass');
+            const economyClass = getInputValue('economyClass');
+            const totalPrice = firstClass * 150 + economyClass * 100;
             document.getElementById('Subtotal').innerText = '$' + totalPrice;
-
-            const tex = Math.round(totalPrice * 0.1)
-            document.getElementById('tex-amount').innerText = '$' + tex
-
-            const grandTotal = totalPrice + tex
-
-
-            document.getElementById('grand-total').innerText = '$' + grandTotal
-
-
+            const tex = Math.round(totalPrice * 0.1);
+            document.getElementById('tex-amount').innerText = '$' + tex;
+            const grandTotal = totalPrice + tex;
+            document.getElementById('grand-total').innerText = '$' + grandTotal;
 
         }
 
         function getInputValue(ticket) {
             const ticketInput = document.getElementById(ticket + '-count');
             const ticketCount = parseInt(ticketInput.value);
-
             return ticketCount;
-
         }
     </script>
     <!--Thank You-->
