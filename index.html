@@ -107,7 +107,12 @@
                 <button id="booking" class="btn-style">Book Now</button>
             </div>
 
-            <div class="booking-content">
+            <div id="alertBtn" class="alert alert-primary alert-dismissible fade show" role="alert">
+                <h2>Your E-ticket Booking<br> SuccessFully Done</h2>
+                <h4> Have a nice journey<br>Thanks for staying with us!</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div id="content" class="booking-content">
                 <h1>discover <br> around the world</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
             </div>
@@ -146,6 +151,15 @@
             const ticketCount = parseInt(ticketInput.value);
             return ticketCount;
         }
+
+        const bookingBtn = document.getElementById('booking');
+        bookingBtn.addEventListener('click', function() {
+            const bookinContent = document.getElementById('content');
+            console.log(bookinContent)
+            bookinContent.style.display = 'none';
+
+            alertBtn.style.display = "block";
+        })
     </script>
     <!--Thank You-->
 </body>

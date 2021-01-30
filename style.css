@@ -140,3 +140,8 @@ a.active {
     display: flex;
     justify-content: space-between;
 }
+
+#alertBtn {
+    display: none;
+    text-align: center;
+}
